@@ -1,4 +1,4 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Send prediction requests to the served MLflow model.
 
@@ -52,8 +52,7 @@ def main():
     print("Sending prediction requests to model server...\n")
 
     data = {
-        "columns": COLUMNS,
-        "instances": [s["features"] for s in sample_systems],
+        "inputs": {col: [s["features"][i] for s in sample_systems] for i, col in enumerate(COLUMNS)},
     }
 
     try:
