@@ -1,4 +1,4 @@
-# Lab 4: MLflow Experiment Tracking — MLPerf Inference Results Tracker
+# MLflow Experiment Tracking - MLPerf Inference Results Tracker
 
 ## Original Lab
 
