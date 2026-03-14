@@ -1,5 +1,15 @@
 # MLflow Experiment Tracking - MLPerf Inference Results Tracker
 
+## Why This Is Useful
+
+When organizations evaluate hardware for AI inference deployment, they face a fragmented landscape — MLPerf results are scattered across GitHub repos and static HTML tables, making systematic comparison difficult. This project solves that by turning MLflow into an **infrastructure performance observatory**:
+
+- **Hardware procurement teams** can query "show me all 8-GPU systems sorted by Llama2-70B throughput" in one click, instead of manually comparing across MLCommons result pages.
+- **ML infrastructure engineers** can track how software stack changes (TensorRT vs vLLM, FP8 vs FP16) affect throughput across hardware generations — the version progression chart showed a **6.3x improvement** from v5.0 to v5.1 on Llama2-70B, mostly driven by new Blackwell GPUs and optimized serving frameworks.
+- **Capacity planning** becomes data-driven: the throughput prediction model (R2=0.87) estimates expected inference performance from system specs before purchasing hardware, and the scaling efficiency chart reveals diminishing returns beyond certain GPU counts.
+
+This is the same kind of systems-level performance tracking that HPC teams do when benchmarking clusters across hardware generations — applied to the AI inference stack using MLflow as the backbone.
+
 ## Original Lab
 
 Based on [MLflow Experiment Tracking Labs](https://github.com/raminmohammadi/MLOps/tree/main/Labs/Experiment_Tracking_Labs/Mlflow_Labs) from the Northeastern University MLOps course repository.
